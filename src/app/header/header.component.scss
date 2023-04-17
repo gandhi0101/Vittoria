@@ -1,0 +1,23 @@
+.header {
+    background-color: #1abc9c;
+    padding: 60px;
+    text-align: center;
+}
+
+.header a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 20px;
+    }
+
+    .header a {
+        display: block;
+        margin: 5px;
+    }
+}

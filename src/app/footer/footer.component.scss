@@ -1,0 +1,39 @@
+// Define some variables
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$font: Arial, sans-serif;
+
+// Define a mixin for centering elements
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Style the footer
+footer {
+    background-color: $bgcolor;
+    padding: 20px;
+    text-align: center;
+    color: $textcolor;
+    font-family: $font;
+
+    // Style the social media icons
+    #social-media {
+        @include center; // Use the mixin
+        list-style: none;
+        margin: 0;
+
+        // Style each icon
+        .icon {
+            width: 32px;
+            height: 32px;
+            margin: 10px;
+        }
+    }
+}
+
+.fab {
+    font-size: 32px;
+    color: blue;
+}
