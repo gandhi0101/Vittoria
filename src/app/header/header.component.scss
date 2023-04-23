@@ -1,23 +1,14 @@
 .header {
-    background-color: #1abc9c;
-    padding: 60px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0899/2262/articles/comida_italiana.jpg?v=1538518314);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 120px 120px 0px;
     text-align: center;
 }
 
-.header a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    margin: 10px;
-}
 
 @media screen and (max-width: 500px) {
     .header {
         padding: 20px;
-    }
-
-    .header a {
-        display: block;
-        margin: 5px;
     }
 }
