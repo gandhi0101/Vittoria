@@ -11,6 +11,7 @@ import { ChatComponent } from './chat/chat.component';
 import { SliderComponent } from './slider/slider.component';
 import { ContactComponent } from './contact/contact.component';
 import { WhyUsComponent } from './why-us/why-us.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WhyUsComponent } from './why-us/why-us.component';
     ChatComponent,
     SliderComponent,
     ContactComponent,
-    WhyUsComponent
+    WhyUsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
