@@ -12,6 +12,7 @@ import { SliderComponent } from './slider/slider.component';
 import { ContactComponent } from './contact/contact.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SliderComponent,
     ContactComponent,
     WhyUsComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
