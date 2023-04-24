@@ -12,17 +12,19 @@ nav a {
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
-    background-color: #eee;
+    background-color: transparent;
     border-radius: 4px;
+    font-size: 20px;
 }
 
 nav a:visited, a:link{
-    color: #607d8b
+    color: black;
+    font-weight: bolder;
 }
 
 nav a:hover{
-    color: #039be5;
-    background-color: #CFD8DC;
+    color: white;
+    background-color: #cfd8dc60;
 }
 
 nav a.active{
