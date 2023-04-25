@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     ContactComponent,
     WhyUsComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -35,4 +37,7 @@ import { HomeComponent } from './home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}
