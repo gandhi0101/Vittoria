@@ -1,9 +1,27 @@
 .header {
-    background-image: url(https://cdn.shopify.com/s/files/1/0899/2262/articles/comida_italiana.jpg?v=1538518314);
+    background-image: url("../../assets/media/comida_italiana.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 150px 120px 120px 0px;
+    padding: 150px 120px 30px 120px;
     text-align: center;
+    
+    #logo{
+        text-align: center;
+        justify-content: center;
+        width: 530px;
+    }
+
+    #eslogan{
+        font-family: 'Qwiley-Regular', cursive;
+        color: white;
+        font-size: 60px;
+        font-weight: lighter;
+    }
+}
+
+@font-face {
+    font-family: 'Qwiley-Regular';
+    src: url("../../assets/fonts/Qwigley-Regular.ttf");
 }
 
 
