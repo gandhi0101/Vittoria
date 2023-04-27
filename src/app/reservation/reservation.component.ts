@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitasService } from '../citas.service';
 
 @Component({
   selector: 'app-reservation',
@@ -16,7 +17,7 @@ export class ReservationComponent implements OnInit {
 
 
 
-  constructor() {
+  constructor(private citas: CitasService) {
     this.horasDisp();
   }
 
@@ -31,7 +32,7 @@ export class ReservationComponent implements OnInit {
   }
 
   fechaCambiada(){
-    this.horasDisp();
+   this.horasDisp();
   }
 
   horasDisp(){
@@ -54,9 +55,11 @@ export class ReservationComponent implements OnInit {
       }
     } else if (horaActual >= 8) {
       let hora = horaActual;
-      let minutos = minutosActuales;
+      let minutos = minutosActuales >= 30 ? 30 : 0; // Redondeamos a la hora o a la media hora siguiente
 
+      console.log(horaActual, minutosActuales);
       // Creamos un bucle para agregar las horas disponibles a la lista
+      
       while (hora < 24) {
         const horaString = hora.toString().padStart(2, '0');
         const minutosString = minutos.toString().padStart(2, '0');

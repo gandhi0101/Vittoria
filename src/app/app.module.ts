@@ -14,6 +14,7 @@ import { WhyUsComponent } from './why-us/why-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { CitasService } from './citas.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ReservationComponent } from './reservation/reservation.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CitasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
