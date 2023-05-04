@@ -12,7 +12,7 @@ export class ReservationComponent implements OnInit {
   fecha:string="";
   hora:string="";
   personas:string="";
-  numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   horasDisponibles: string[] = [];
 
 
@@ -45,7 +45,7 @@ export class ReservationComponent implements OnInit {
     if (this.fechahoy !== this.fecha) {
       // Si es diferente, definimos la hora de inicio y de fin para la lista de horas disponibles
       const horaInicio = 8;
-      const horaFin = 24;
+      const horaFin = 20;
 
       // Creamos un bucle para agregar las horas disponibles a la lista
       for (let hora = horaInicio; hora < horaFin; hora++) {
@@ -60,7 +60,7 @@ export class ReservationComponent implements OnInit {
       console.log(horaActual, minutosActuales);
       // Creamos un bucle para agregar las horas disponibles a la lista
       
-      while (hora < 24) {
+      while (hora < 20 ){
         const horaString = hora.toString().padStart(2, '0');
         const minutosString = minutos.toString().padStart(2, '0');
         this.horasDisponibles.push(`${horaString}:${minutosString}`);
