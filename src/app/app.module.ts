@@ -18,6 +18,8 @@ import { CitasService } from './citas.service';
 import { SliderhComponent } from './header/sliderh/sliderh.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { Reservation2Component } from './reservation2/reservation2.component';
+import { DatesComponent } from './dates/dates.component';
+import { SearchDatesComponent } from './search-dates/search-dates.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { Reservation2Component } from './reservation2/reservation2.component';
     ReservationComponent,
     SliderhComponent,
     AyudaComponent,
-    Reservation2Component
+    Reservation2Component,
+    DatesComponent,
+    SearchDatesComponent
   ],
   imports: [
     BrowserModule,

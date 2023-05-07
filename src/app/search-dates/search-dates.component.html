@@ -1,0 +1,23 @@
+<input #msg class="form-control" (keyup.enter)="ver(msg.value)" type="text">
+<ng-container *ngIf="index !== -1 else noexiste">
+    <div class="card p3 mt-2 container">
+        <div class="card-block">
+            <div class="card-title">
+               <p> Nombre: {{datos.nombre}}</p>
+            </div>
+            <div class="text">
+                <p> Bibliografia: {{datos.correo}}</p>
+            </div>
+            <div class="text">
+                <p>Casa: {{datos.fecha}}</p>
+            </div>
+            <div class="text">
+                <p><small>Aparicion: {{datos.hora}}</small></p>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #noexiste>
+    <p>{{mensaje}}</p>
+</ng-template>

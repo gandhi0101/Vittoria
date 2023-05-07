@@ -1,0 +1,23 @@
+<h2>Listado clientes</h2>
+<div *ngIf="!clientes.length">No hay clientes por el momento</div>
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Hora</th>
+      <th scope="col">Personas</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let cliente of clientes">
+      <td scope="row">{{ cliente.nombre }}</td>
+      <td>{{ cliente.correo }}</td>
+      <td>{{ cliente.fecha }}</td>
+      <td>{{ cliente.hora }}</td>
+      <td>{{ cliente.personas }}</td>
+
+    </tr>
+  </tbody>
+</table>

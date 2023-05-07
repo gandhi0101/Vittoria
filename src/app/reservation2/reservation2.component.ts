@@ -4,8 +4,6 @@ import { CitasService } from '../citas.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
-
-
 @Component({
   selector: 'app-reservation2',
   templateUrl: './reservation2.component.html',
