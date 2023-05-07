@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CitasService } from '../citas.service';
 
 @Component({
@@ -7,8 +7,8 @@ import { CitasService } from '../citas.service';
   styleUrls: ['./reservation.component.scss']
 })
 export class ReservationComponent implements OnInit {
+  paso2=true;
   fechahoy:string="";
-
   fecha:string="";
   hora:string="";
   personas:string="";
@@ -73,6 +73,11 @@ export class ReservationComponent implements OnInit {
       }
     }
     console.log(this.horasDisponibles);
+  }
+
+  revisarPaso2(){
+    this.paso2=false;
+    
   }
 
 

@@ -17,6 +17,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { CitasService } from './citas.service';
 import { SliderhComponent } from './header/sliderh/sliderh.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
+import { Reservation2Component } from './reservation2/reservation2.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AyudaComponent } from './ayuda/ayuda.component';
     HomeComponent,
     ReservationComponent,
     SliderhComponent,
-    AyudaComponent
+    AyudaComponent,
+    Reservation2Component
   ],
   imports: [
     BrowserModule,
