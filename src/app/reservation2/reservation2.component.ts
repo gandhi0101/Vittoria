@@ -2,6 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { CitasService } from '../citas.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
+
 
 @Component({
   selector: 'app-reservation2',
@@ -36,7 +39,16 @@ export class Reservation2Component implements OnInit {
     this.cliente = this.citaService.nuevoCliente();
     this.router.navigateByUrl('/');
   }
+  showModal(){
+    Swal.fire({
+      title: 'Gracias por reservar.',
+      width: 600,
+      padding: '3em',
+      color: '#fff',
+      background: '#fff url(../../assets/media/col.jpg)',
+    })
+  }
   
-
-
 }
+
+

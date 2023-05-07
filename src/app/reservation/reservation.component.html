@@ -1,10 +1,6 @@
 <div *ngIf="paso2">
   <div class="contenedor">
     <div class="form">
-      <div class="range">
-        <div class="fill">
-        </div>
-      </div>
       <span class="title">Reservacion</span>
       <span class="sub mb">Encuentra tu mesa para cualquier ocacion</span>
       <div class="container text-center">
@@ -97,6 +93,10 @@
       <div *ngIf="fecha && hora && personas else elseBlock">
         <span class="sub">Su reservacion es <span class="selec"> {{fecha}} </span> para <span class="selec">{{personas}}
           </span> a las <span class="selec">{{hora}}</span></span>
+          <br>
+          <br>
+          <div class="selec text-center">{{fechaDisponible}} </div>
+          
         <button class="boton" (click)="revisarPaso2()">Reservar</button>
       </div>
       <ng-template #elseBlock>
@@ -113,3 +113,6 @@
   <!-- Aqui se se estan mandando las tres variables del formulario con herencia padre hijo -->
   <app-reservation2 [fecha2]="fecha" [hora2]="hora" [personas2]="personas"></app-reservation2>
 </div>
+
+
+

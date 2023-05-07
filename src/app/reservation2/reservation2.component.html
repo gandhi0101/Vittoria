@@ -1,9 +1,12 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
 <div class="contenedor">
   <div class="form">
-    <div class="range">
-      <div class="fill">
-      </div>
-    </div>
+
     <span class="title">Datos personales</span>
     <span class="sub mb">Completa el fomulario para poder contactarte</span>
     <div class="container text-center">
@@ -78,7 +81,7 @@
        </svg>
         </div>
         <div *ngIf="cliente.correo && cliente.nombre else elseBlock">
-          <button class="boton" (click)="nuevoCliente()">Confirmar</button>
+          <button class="boton" (click)="nuevoCliente(); showModal()">Confirmar</button>
         </div>
         <ng-template #elseBlock>
           <div>
