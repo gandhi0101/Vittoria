@@ -15,6 +15,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { CitasService } from './citas.service';
+import { SliderhComponent } from './header/sliderh/sliderh.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
+import { Reservation2Component } from './reservation2/reservation2.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { CitasService } from './citas.service';
     WhyUsComponent,
     NavbarComponent,
     HomeComponent,
-    ReservationComponent
+    ReservationComponent,
+    SliderhComponent,
+    AyudaComponent,
+    Reservation2Component
   ],
   imports: [
     BrowserModule,

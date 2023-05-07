@@ -1,17 +1,14 @@
 .header {
-    background-image: url("../../assets/media/comida_italiana.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 150px 120px 30px 120px;
     text-align: center;
-    
-    #logo{
+
+    #logo {
         text-align: center;
         justify-content: center;
         width: 530px;
     }
 
-    #eslogan{
+    #eslogan {
         font-family: 'Qwiley-Regular', cursive;
         color: white;
         font-size: 60px;
@@ -29,4 +26,8 @@
     .header {
         padding: 20px;
     }
+}
+app-slider{
+    height: 400px;
+    width: 100%;
 }
