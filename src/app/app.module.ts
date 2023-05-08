@@ -24,6 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import {MatStepperModule} from '@angular/material/stepper';
     BrowserAnimationsModule,
     MatProgressBarModule,
     MatTableModule,
-    MatStepperModule
+    MatStepperModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatExpansionModule
   ],
   providers: [CitasService],
   bootstrap: [AppComponent]

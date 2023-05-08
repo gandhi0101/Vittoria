@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./why-us.component.scss']
 })
 export class WhyUsComponent {
-
+  panelOpenState = false;
 }

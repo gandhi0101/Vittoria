@@ -16,6 +16,7 @@ export class ReservationComponent implements OnInit {
   numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   horasDisponibles: string[] = [];
   fechaDisponible: string = "";
+  spiner: boolean=false;
 
 
 
@@ -88,6 +89,7 @@ export class ReservationComponent implements OnInit {
         setTimeout(() => {
       }, 2000);
       } else {
+        this.spiner=true;
         this.fechaDisponible = "La fecha si esta disponible";
         setTimeout(() => {
           this.paso2 = false;
@@ -95,6 +97,7 @@ export class ReservationComponent implements OnInit {
       }
     } else {
       this.fechaDisponible = "La fecha si esta disponible";
+      this.spiner=true;
       setTimeout(() => {
         console.log('Se ha ejecutado la función después de 5 segundos');
         this.paso2 = false;

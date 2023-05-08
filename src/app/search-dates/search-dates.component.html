@@ -1,5 +1,7 @@
 <input #msg class="form-control" (keyup.enter)="ver(msg.value)" type="text">
 <ng-container *ngIf="index !== -1 else noexiste">
+    <mat-card> <!--Componente de Material-->
+        <mat-card-content>
     <div class="card p3 mt-2 container">
         <div class="card-block">
             <div class="card-title">
@@ -16,8 +18,14 @@
             </div>
         </div>
     </div>
+</mat-card-content>
+</mat-card>
 </ng-container>
 
 <ng-template #noexiste>
     <p>{{mensaje}}</p>
 </ng-template>
+
+
+  
+  
