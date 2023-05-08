@@ -1,0 +1,19 @@
+.container {
+    background: rgba(156, 143, 167, 0.308);
+    background: radial-gradient(circle, rgba(156, 143, 167, 0.123) 0%, rgba(0, 0, 0, 0.26) 56%);
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+.cuerpo {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+
+    .carousel {
+        width: 30%;
+        margin-right: 30px;
+    }
+}
