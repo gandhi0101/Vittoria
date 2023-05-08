@@ -20,6 +20,10 @@ import { AyudaComponent } from './ayuda/ayuda.component';
 import { Reservation2Component } from './reservation2/reservation2.component';
 import { DatesComponent } from './dates/dates.component';
 import { SearchDatesComponent } from './search-dates/search-dates.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTableModule} from '@angular/material/table';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { SearchDatesComponent } from './search-dates/search-dates.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    MatTableModule,
+    MatStepperModule
   ],
   providers: [CitasService],
   bootstrap: [AppComponent]

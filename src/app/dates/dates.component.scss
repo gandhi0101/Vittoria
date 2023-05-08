@@ -1,0 +1,22 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+    width: 70%;
+  }
+  
+  .table {
+    width: 70%;
+  }
+
+  .example-container::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+  }
+  
+  .example-container::-webkit-scrollbar-track {
+    background: rgba(187, 170, 170, 0);        /* color of the tracking area */
+  }
+  
+  .example-container::-webkit-scrollbar-thumb {
+    background-color: rgb(143, 143, 143);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
