@@ -24,13 +24,12 @@ footer {
         @include center; // Use the mixin
         list-style: none;
         margin: 0;
-
-        // Style each icon
-        .icon {
+        li{
             width: 32px;
             height: 32px;
             margin: 10px;
         }
+
     }
 }
 
