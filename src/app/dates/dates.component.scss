@@ -1,8 +1,22 @@
+.pru{
+  border: 5px;
+  background-color: aqua;
+  height: 100px;
+}
 .example-container {
-    height: 400px;
+  margin-top: 30px;
     overflow: auto;
     width: 70%;
+
   }
+  
+ .titulo{
+  width: 70%;
+ }
+
+ .alert{
+  margin: 20px 20px 20px 20px;
+ }
   
   .table {
     width: 70%;

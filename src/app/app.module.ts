@@ -16,7 +16,6 @@ import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { CitasService } from './citas.service';
 import { SliderhComponent } from './header/sliderh/sliderh.component';
-import { AyudaComponent } from './ayuda/ayuda.component';
 import { Reservation2Component } from './reservation2/reservation2.component';
 import { DatesComponent } from './dates/dates.component';
 import { SearchDatesComponent } from './search-dates/search-dates.component';
@@ -27,6 +26,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { CitasComponent } from './citas/citas.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +42,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HomeComponent,
     ReservationComponent,
     SliderhComponent,
-    AyudaComponent,
     Reservation2Component,
     DatesComponent,
-    SearchDatesComponent
+    SearchDatesComponent,
+    CitasComponent
   ],
   imports: [
     BrowserModule,
