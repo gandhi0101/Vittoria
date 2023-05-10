@@ -1,6 +1,10 @@
 .header {
     // padding: 150px 120px 30px 120px;
     // text-align: center;
+    .carousel-item{
+        transition: transform .2s ease, opacity .5s ease-out;
+    }
+
     .logEslog {
         position: absolute;
         top: 50%;
