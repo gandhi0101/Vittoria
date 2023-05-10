@@ -27,6 +27,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CitasComponent } from './citas/citas.component';
+import { SeachComponent } from './seach/seach.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CitasComponent } from './citas/citas.component';
     Reservation2Component,
     DatesComponent,
     SearchDatesComponent,
-    CitasComponent
+    CitasComponent,
+    SeachComponent
   ],
   imports: [
     BrowserModule,
