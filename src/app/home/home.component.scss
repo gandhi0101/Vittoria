@@ -86,3 +86,28 @@ $animation-duration: 3s;
         font-weight: 500;
     }
 }
+
+.menu{
+    h1{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .container{
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 1rem;
+
+        .card{
+            .card-title{
+                font-size: 15px;
+                font-weight: bolder;
+                text-align: center;
+            }
+            .card-text{
+                text-align: justify;
+            }
+        }
+
+    }
+}

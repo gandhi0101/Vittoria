@@ -28,7 +28,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CitasComponent } from './citas/citas.component';
 import { SeachComponent } from './seach/seach.component';
-import { MenuService } from './menu.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -64,7 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     HttpClientModule
   ],
-  providers: [CitasService, MenuService],
+  providers: [CitasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
