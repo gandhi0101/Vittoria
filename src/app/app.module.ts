@@ -30,6 +30,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { CitasComponent } from './citas/citas.component';
 import { SeachComponent } from './seach/seach.component';
 import { MenuService } from './menu.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { MenuService } from './menu.service';
     MatProgressSpinnerModule,
     MatCardModule,
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [CitasService, MenuService],
   bootstrap: [AppComponent]
