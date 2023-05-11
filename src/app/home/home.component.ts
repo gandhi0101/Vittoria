@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Menu, MenuService } from '../menu.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
