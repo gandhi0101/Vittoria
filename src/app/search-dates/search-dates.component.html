@@ -1,4 +1,4 @@
-<input #msg class="form-control" (keyup.enter)="ver(msg.value)" type="text">
+<app-seach (nombre)="ver($event)"></app-seach>
 <ng-container *ngIf="index !== -1 else noexiste">
     <mat-card> <!--Componente de Material-->
         <mat-card-content>
@@ -8,7 +8,7 @@
                <p> Nombre: {{datos.nombre}}</p>
             </div>
             <div class="text">
-                <p> Bibliografia: {{datos.correo}}</p>
+                <p> Correo: {{datos.correo}}</p>
             </div>
             <div class="text">
                 <p>Fecha: {{datos.fecha}}</p>
