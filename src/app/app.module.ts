@@ -26,8 +26,10 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { CitasComponent } from './citas/citas.component';
 import { SeachComponent } from './seach/seach.component';
+import { MenuService } from './menu.service';
 
 @NgModule({
   declarations: [
@@ -59,9 +61,10 @@ import { SeachComponent } from './seach/seach.component';
     MatStepperModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule
   ],
-  providers: [CitasService],
+  providers: [CitasService, MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

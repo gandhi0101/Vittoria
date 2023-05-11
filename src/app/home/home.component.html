@@ -32,5 +32,22 @@
         </div>
     </div>
 </div>
+<div class="menu">
+    <h1>Menu</h1>
+    <div class="container">
+        <h2>Pizzas</h2>
+        <div class="row align-items-center">
+            <div class="col" *ngFor="let pizza of Menu.pizza">
+                <div class="card" style="width: 18rem;">
+                    <img [src]="pizza.imagen" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ pizza.nombre }}</h5>
+                        <p class="card-text">Ingredientes: <br><br> {{ pizza.ingredientes }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>    
 
 
