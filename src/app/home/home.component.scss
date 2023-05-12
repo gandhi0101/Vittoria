@@ -52,6 +52,7 @@ $animation-duration: 3s;
             text-align: center;
             color: #fff;
             margin-right: 20px;
+            text-decoration: none;
 
             img {
                 width: 150px;
@@ -83,5 +84,52 @@ $animation-duration: 3s;
         text-align: center;
         font-size: 20px;
         font-weight: 500;
+    }
+}
+
+.menu{
+    margin-bottom: 20px;
+    .menuletra{
+        font-size: 50px;
+        margin-bottom: 30px;
+        color: #FFD700;
+    }
+
+    .container{
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 1rem;
+        background-image: linear-gradient(to right, #009246, #FFFFFF, #CE2B37); /* degradado rojo, blanco y verde */
+        .card{
+            .card-title{
+                font-size: 15px;
+                font-weight: bolder;
+                text-align: center;
+            }
+            .card-text{
+                text-align: justify;
+            }
+        }
+
+    }
+}
+
+.contenedor{
+    margin: 50px;
+    padding: 25px;
+    background-color: #292626;
+    border-radius: 1rem;
+    .masonry{
+        columns: 5;
+        column-width: 230px;
+        column-gap: 0.5em;
+        img{
+            max-width: 100%;
+            margin-bottom: 0.5em;
+            display: block;
+            border-radius: 1rem;
+        }
+    
+    
     }
 }
