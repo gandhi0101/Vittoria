@@ -38,19 +38,19 @@
 
 }
 
-.contenedor {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px 20px;
-    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.021),
-        0px 59px 36px rgba(0, 0, 0, 0.05),
-        0px 26px 26px rgba(0, 0, 0, 0.09),
-        0px 7px 15px rgba(0, 0, 0, 0.041),
-        0px 15px 25px rgba(0, 0, 0, 0.1);
-}
-
 .integ{
     margin: 20px;
+    .contenedor {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px 20px;
+        box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.021),
+            0px 59px 36px rgba(0, 0, 0, 0.05),
+            0px 26px 26px rgba(0, 0, 0, 0.09),
+            0px 7px 15px rgba(0, 0, 0, 0.041),
+            0px 15px 25px rgba(0, 0, 0, 0.1);
+    }
+
     .nombre{
         margin: 0;
         margin-top: 15px;
