@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'about', component: WhyUsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'citas', component: CitasComponent},
+  {path: 'about/:id/:user', component: WhyUsComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

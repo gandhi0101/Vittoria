@@ -4,7 +4,8 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 12px;           
+    overflow-y: hidden;    /* width of the entire scrollbar */
   }
   
   body::-webkit-scrollbar-track {
