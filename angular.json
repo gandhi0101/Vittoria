@@ -20,7 +20,6 @@
             "outputPath": "dist/mini2",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "baseHref": "/Vittoria/",
             "polyfills": [
               "zone.js"
             ],
