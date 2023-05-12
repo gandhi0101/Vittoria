@@ -29,6 +29,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { CitasComponent } from './citas/citas.component';
 import { SeachComponent } from './seach/seach.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VideoPipe } from './why-us/video.pipe';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     DatesComponent,
     SearchDatesComponent,
     CitasComponent,
-    SeachComponent
+    SeachComponent,
+    VideoPipe
   ],
   imports: [
     BrowserModule,

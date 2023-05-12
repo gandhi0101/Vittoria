@@ -1,29 +1,35 @@
-.container {
-    font-family: 'Dancing Script', cursive;
-    background: rgba(156, 143, 167, 0.308);
-    background: radial-gradient(circle, rgba(156, 143, 167, 0.123) 0%, rgba(0, 0, 0, 0.137) 56%);
-    border: 1px solid black;
-    padding: 15px;
-    font-size: 20px;
-    box-shadow: 8px 6px 10px gray;
-    border-radius: 16px;
-    color: black;
-
-    h2 {
-        text-align: center;
-    }
-}
-
-
 .cuerpo {
-    margin: 20px;
     display: flex;
     flex-direction: row;
-
-    .carousel {
+    margin: 20px;
+    .carVid{
         margin-top: 130px;
-        width: 30%;
-        margin-right: 30px;
+        margin-left: 20px;
+        .carousel {
+            margin-bottom: 50px;
+            width: 530px;
+        }
+
+    }
+
+    .container {
+        display: grid;
+        place-items: center;
+        margin-left: 30px;
+        font-family: 'Dancing Script', cursive;
+        background: rgba(156, 143, 167, 0.308);
+        background: radial-gradient(circle, rgba(156, 143, 167, 0.123) 0%, rgba(0, 0, 0, 0.137) 56%);
+        border: 1px solid black;
+        padding: 15px;
+        font-size: 20px;
+        box-shadow: 8px 6px 10px gray;
+        border-radius: 16px;
+        color: black;
+    
+        h2 {
+            font-size: 30px;
+            text-align: center;
+        }
     }
 }
 
@@ -43,23 +49,26 @@
         0px 15px 25px rgba(0, 0, 0, 0.1);
 }
 
-.nombre{
-    margin: 0;
-    margin-top: 15px;
-    font-weight: bolder;
-}
-
-.bio {
-    display: flex;
-    img {
-        width: 15%;
-        margin: 5px;
+.integ{
+    margin: 20px;
+    .nombre{
+        margin: 0;
+        margin-top: 15px;
+        font-weight: bolder;
     }
-    .bio1{
-        flex-direction: row;
-        p {
-            padding: 70px;
-            text-align: justify;
+    
+    .bio {
+        display: flex;
+        img {
+            width: 15%;
+            margin: 5px;
+        }
+        .bio1{
+            flex-direction: row;
+            p {
+                padding: 70px;
+                text-align: justify;
+            }
         }
     }
 }
