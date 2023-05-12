@@ -3,6 +3,8 @@ import { QueryList } from '@angular/core';
 import { Component } from '@angular/core';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-why-us',
@@ -14,8 +16,9 @@ export class WhyUsComponent {
   panelOpenState = false;
   id: string = '';
   user: string = '';
-  
+  safeUrl: any;
   @ViewChildren(MatExpansionPanel) panels!: QueryList<MatExpansionPanel>;
+  
 
   ngAfterViewInit() {
 
@@ -36,14 +39,17 @@ export class WhyUsComponent {
   }
 
 
-  constructor(private rout: ActivatedRoute) { }
+  constructor(private rout: ActivatedRoute,private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.rout.params.subscribe(params => {
       this.id = params['id'];
-      this.user = `https://github.com/${params['user']}`;
-      console.log(params);
+      this.user = params['user'];
+      
+      
     });
+    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://github.com/' + this.user);
   }
+  
 
 }

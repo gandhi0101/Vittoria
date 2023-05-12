@@ -66,7 +66,13 @@
             gran destreza en la programación de software, el diseño de algoritmos y la resolución de problemas
             complejos. Su capacidad para analizar situaciones y pensar de manera lógica le permite abordar desafíos
             técnicos con eficiencia y efectividad.</p>
-            <iframe src={{this.user}}></iframe>
+            <div *ngIf="user == 'gandhi0101'; else noUser" class="githubPerfiles" >
+              <h1> {{user}}</h1>
+            <iframe [src]="safeUrl"></iframe>
+          </div>
+          <ng-template #noUser>
+            <p></p>
+          </ng-template>
             <p></p>
         </div>
       </div>
@@ -92,6 +98,13 @@
             Juan ha dedicado años a su formación académica y profesional en el ámbito de los sistemas. Se graduó con
             honores en Ingeniería de Sistemas Computacionales de una prestigiosa universidad, donde adquirió una sólida
             base en programación, redes, seguridad informática y administración de sistemas.</p>
+            <div *ngIf="user == 'juanMa281'; else noUser" class="githubPerfiles" >
+              <h1> {{user}}</h1>
+            <iframe [src]="safeUrl"></iframe>
+          </div>
+          <ng-template #noUser>
+            <p></p>
+          </ng-template>
         </div>
       </div>
     </mat-expansion-panel>
@@ -116,6 +129,13 @@
             Brayan ha dedicado años a su formación académica y profesional en el campo de los sistemas. Se graduó con
             honores en Ingeniería de Sistemas de una prestigiosa universidad, donde adquirió una sólida base en
             programación, redes, seguridad informática y gestión de sistemas.</p>
+            <div *ngIf="user == 'BrayanToledo12'; else noUser" class="githubPerfiles" >
+              <h1> {{user}}</h1>
+            <iframe [src]="safeUrl"></iframe>
+          </div>
+          <ng-template #noUser>
+            <p></p>
+          </ng-template>
         </div>
       </div>
     </mat-expansion-panel>
@@ -144,6 +164,13 @@
             en soluciones funcionales y robustas. Su capacidad de aprendizaje rápido y su determinación lo han mantenido
             en
             la vanguardia de la industria de la programación.</p>
+            <div *ngIf="user == 'GerardoVazGa'; else noUser" class="githubPerfiles" >
+              <h1> {{user}}</h1>
+            <iframe [src]="safeUrl"></iframe>
+          </div>
+          <ng-template #noUser>
+            <p></p>
+          </ng-template>
         </div>
       </div>
     </mat-expansion-panel>
