@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SliderhComponent } from './sliderh.component';
+import { CitasComponent } from './citas.component';
 
-describe('SliderhComponent', () => {
-  let component: SliderhComponent;
-  let fixture: ComponentFixture<SliderhComponent>;
+describe('CitasComponent', () => {
+  let component: CitasComponent;
+  let fixture: ComponentFixture<CitasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SliderhComponent ]
+      declarations: [ CitasComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SliderhComponent);
+    fixture = TestBed.createComponent(CitasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

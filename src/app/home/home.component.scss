@@ -1,33 +1,60 @@
-.bienvenida{
- 
+$animation-duration: 3s;
+
+// Define los keyframes para la animación
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bienvenida {
+
     padding: 50px;
     text-align: center;
-    background-image: linear-gradient(35deg, #493836 0, #392f2f 25%, #292626 50%, #191d1d 75%, #071514 100%);
-    #texto1, #texto2{
+    background-image: linear-gradient(35deg, #493836, #392f2f, #292626, #191d1d, #071514);
+    animation: gradient 15s ease infinite;
+    background-size: 400%;
+
+    #texto1,
+    #texto2 {
         font-size: 3rem;
     }
-    #texto1{
+
+    #texto1 {
         color: #fff;
     }
-    #texto2{
+
+    #texto2 {
         color: lightgrey;
     }
-    #texto3{
+
+    #texto3 {
         margin-top: 30px;
         font-size: 20px;
         color: #fff;
         margin-bottom: 50px;
     }
-    #integrantes{
+
+    #integrantes {
         display: flex;
         justify-content: center;
         flex-direction: row;
 
-        #integ1{
+        #integ1 {
             text-align: center;
             color: #fff;
             margin-right: 20px;
-            img{
+            text-decoration: none;
+
+            img {
                 width: 150px;
                 border-radius: 5rem;
             }
@@ -35,27 +62,52 @@
     }
 }
 
-.exp{
+.exp {
     padding: 50px;
 
-    .card{
+    .card {
         padding: 50px;
     }
 
-    .col-md-4{
+    .col-md-4 {
         padding: 20px;
-        
+
     }
 
-    .card-title{
+    .card-title {
         text-align: center;
         font-size: 2rem;
         margin-bottom: 20px;
     }
 
-    .card-text{
+    .card-text {
         text-align: center;
         font-size: 20px;
         font-weight: 500;
+    }
+}
+
+.menu{
+    h1{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .container{
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 1rem;
+
+        .card{
+            .card-title{
+                font-size: 15px;
+                font-weight: bolder;
+                text-align: center;
+            }
+            .card-text{
+                text-align: justify;
+            }
+        }
+
     }
 }

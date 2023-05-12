@@ -9,10 +9,10 @@
         sabor y cada bocado una aventura culinaria.
     </p>
     <div id="integrantes">
-        <div id="integ1"><img src="../assets/media/integrantes/gandhi.jpg" alt=""><p>Gandhi Cabral Villareal</p></div>
-        <div id="integ1"><img src="../assets/media/integrantes/juan.jpg" alt=""><p>Juan Martinez Martinez</p></div>
-        <div id="integ1"><img src="../assets/media/integrantes/gerardo.jpg" alt=""><p>Gerardo Vazquez Galindo</p></div>
-        <div id="integ1"><img src="../../assets/media/integrantes/brayan.jpeg" alt=""><p>Brayan Toledo Vera</p></div>
+        <a href="https://github.com/gandhi0101"><div id="integ1"><img src="../assets/media/integrantes/gandhi.jpg" alt=""><p>Gandhi Cabral Villareal</p></div></a>
+        <a href="https://github.com/juanMa281"><div id="integ1"><img src="../assets/media/integrantes/juan.jpg" alt=""><p>Juan Martinez Martinez</p></div></a>
+        <a href="https://github.com/GerardoVazGa"><div id="integ1"><img src="../assets/media/integrantes/gerardo.jpg" alt=""><p>Gerardo Vazquez Galindo</p></div></a>
+        <a href="https://github.com/BrayanToledo12"><div id="integ1"><img src="../../assets/media/integrantes/brayan.jpeg" alt=""><p>Brayan Toledo Vera</p></div></a>
     </div>
 </div>
 <div class="exp">
@@ -33,7 +33,20 @@
     </div>
 </div>
 
-<app-dates></app-dates>
-<app-search-dates></app-search-dates>
-
+<div class="menu">
+    <h1 class="text-center">Menú</h1>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col" *ngFor="let i of array">
+                <div class="card" style="width: 15rem; height: 500px; margin-bottom: 10px;">
+                    <img [src]="i.img" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ i.name }}</h5>
+                        <p class="card-text">Descripcion: <br> {{ i.body }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div> 
 

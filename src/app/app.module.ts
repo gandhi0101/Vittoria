@@ -15,8 +15,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { CitasService } from './citas.service';
-import { SliderhComponent } from './header/sliderh/sliderh.component';
-import { AyudaComponent } from './ayuda/ayuda.component';
 import { Reservation2Component } from './reservation2/reservation2.component';
 import { DatesComponent } from './dates/dates.component';
 import { SearchDatesComponent } from './search-dates/search-dates.component';
@@ -27,6 +25,10 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { CitasComponent } from './citas/citas.component';
+import { SeachComponent } from './seach/seach.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,11 +43,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NavbarComponent,
     HomeComponent,
     ReservationComponent,
-    SliderhComponent,
-    AyudaComponent,
     Reservation2Component,
     DatesComponent,
-    SearchDatesComponent
+    SearchDatesComponent,
+    CitasComponent,
+    SeachComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatStepperModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [CitasService],
   bootstrap: [AppComponent]

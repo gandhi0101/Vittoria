@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AyudaComponent } from './ayuda.component';
+import { SeachComponent } from './seach.component';
 
-describe('AyudaComponent', () => {
-  let component: AyudaComponent;
-  let fixture: ComponentFixture<AyudaComponent>;
+describe('SeachComponent', () => {
+  let component: SeachComponent;
+  let fixture: ComponentFixture<SeachComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AyudaComponent ]
+      declarations: [ SeachComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AyudaComponent);
+    fixture = TestBed.createComponent(SeachComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

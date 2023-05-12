@@ -18,6 +18,7 @@ export class SearchDatesComponent {
   }
 
 
+  
   ver(aux:string){
     this.index = this.clientes.findIndex( p => p.nombre === aux);
     console.log(this.index);
