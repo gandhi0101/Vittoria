@@ -13,6 +13,7 @@ export class WhyUsComponent {
   panelOpenState = false;
   id: string = '';
   user: string = '';
+  link = "kDtpVBzKhhE";
   
   @ViewChildren(MatExpansionPanel) panels!: QueryList<MatExpansionPanel>;
 
