@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./why-us.component.scss']
 })
 export class WhyUsComponent {
+  link = "kDtpVBzKhhE"
   panelOpenState = false;
   id: string = '';
   user: string = '';
