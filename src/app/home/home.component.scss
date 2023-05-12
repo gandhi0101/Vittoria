@@ -88,16 +88,17 @@ $animation-duration: 3s;
 }
 
 .menu{
-    h1{
+    .menuletra{
         font-size: 50px;
         margin-bottom: 30px;
+        color: #FFD700;
     }
 
     .container{
         border: 1px solid black;
         padding: 15px;
         border-radius: 1rem;
-
+        background-image: linear-gradient(to right, #009246, #FFFFFF, #CE2B37); /* degradado rojo, blanco y verde */
         .card{
             .card-title{
                 font-size: 15px;
