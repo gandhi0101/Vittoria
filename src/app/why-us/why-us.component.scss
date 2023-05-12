@@ -8,7 +8,8 @@
     box-shadow: 8px 6px 10px gray;
     border-radius: 16px;
     color: black;
-    h2{
+
+    h2 {
         text-align: center;
     }
 }
@@ -26,19 +27,39 @@
     }
 }
 
-.mat-mdc-form-field + .mat-mdc-form-field {
+.mat-mdc-form-field+.mat-mdc-form-field {
     margin-left: 8px;
 
-  }
+}
 
-  .contenedor{
+.contenedor {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px 20px;
     box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.021),
-    0px 59px 36px rgba(0, 0, 0, 0.05),
-     0px 26px 26px rgba(0, 0, 0, 0.09),
-    0px 7px 15px rgba(0, 0, 0, 0.041),
-     0px 15px 25px rgba(0, 0, 0, 0.1);
-  }
-  
+        0px 59px 36px rgba(0, 0, 0, 0.05),
+        0px 26px 26px rgba(0, 0, 0, 0.09),
+        0px 7px 15px rgba(0, 0, 0, 0.041),
+        0px 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.nombre{
+    margin: 0;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+
+.bio {
+    display: flex;
+    img {
+        width: 15%;
+        margin: 5px;
+    }
+    .bio1{
+        flex-direction: row;
+        p {
+            padding: 70px;
+            text-align: justify;
+        }
+    }
+}
