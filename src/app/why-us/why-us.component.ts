@@ -17,6 +17,7 @@ export class WhyUsComponent {
   id: string = '';
   user: string = '';
   safeUrl: any;
+
   @ViewChildren(MatExpansionPanel) panels!: QueryList<MatExpansionPanel>;
   
 
