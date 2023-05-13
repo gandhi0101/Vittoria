@@ -1,15 +1,23 @@
 <div class="cuerpo">
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../../assets/media/logo 1.png" class="d-block w-100" alt="...">
+  <div class="carVid">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../assets/media/logo 1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../assets/media/lasana-comida.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../assets/media/italianowhyus.jpg" class="d-block w-100" alt="...">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="../../assets/media/lasana-comida.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="../../assets/media/italianowhyus.jpg" class="d-block w-100" alt="...">
-      </div>
+    </div>
+    <div class="contenido">
+      <iframe width="560" height="315" [src]="link | video:'https://www.youtube.com/embed/' " title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
   </div>
 
@@ -43,16 +51,7 @@
       <p style="color: blue; text-align: center;">Proyecto Universitario  (la materia de Tecnologias web)</p>
   </div>
 </div>
-<div class="contenido">
-  <iframe width="560" height="315" [src]="link | video:'https://www.youtube.com/embed/' " title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-    modestbranding="1"
-    controls="0"
-    showinfo="0"></iframe>
-</div>
-<div>
+<div class="integ">
   
   <mat-accordion> <!--Este es un componente de Material-->
     <mat-expansion-panel hideToggle>
@@ -81,9 +80,9 @@
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
-            <p></p>
+            <!-- <p></p> -->
           </ng-template>
-            <p></p>
+
         </div>
       </div>
     </mat-expansion-panel>
@@ -113,7 +112,7 @@
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
-            <p></p>
+            <!-- <p></p> -->
           </ng-template>
         </div>
       </div>
@@ -144,7 +143,7 @@
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
-            <p></p>
+            <!-- <p></p> -->
           </ng-template>
         </div>
       </div>
@@ -179,7 +178,7 @@
             <img [src]="safeUrl">
           </div>
           <ng-template #noUser>
-            <p></p>
+            <!-- <p></p> -->
           </ng-template>
         </div>
       </div>
