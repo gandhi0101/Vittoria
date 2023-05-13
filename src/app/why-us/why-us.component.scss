@@ -70,6 +70,12 @@
 
         .bio1 {
             flex-direction: row;
+            img {
+                height: 600px;
+                width: 900px;
+        
+        
+            }
 
             p {
                 padding: 70px;
@@ -91,7 +97,7 @@
 }
 
 .githubPerfiles {
-    iframe {
+    img {
         height: 800px;
         width: 900px;
 
