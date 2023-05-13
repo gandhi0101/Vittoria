@@ -49,7 +49,7 @@ export class WhyUsComponent {
       
       
     });
-    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://github.com/' + this.user);
+    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('../assets/media/' + this.user+'.png');
   }
   
 
