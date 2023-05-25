@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Vittoria';
 
+  constructor(private afAtth: AngularFireAuth){
+    this.afAtth.authState.subscribe((user)=>{
+      console.log(user);
+    })
+  }
 
 
 }
