@@ -82,7 +82,7 @@
        </svg>
         </div>
         <div *ngIf="cliente.correo && cliente.nombre else elseBlock">
-          <button class="boton" (click)="nuevoCliente(); showModal()">Confirmar</button>
+          <button class="boton" (click)=" showModal(); onSubmit()">Confirmar</button>
         </div>
         <ng-template #elseBlock>
           <div>

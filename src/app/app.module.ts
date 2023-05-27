@@ -43,6 +43,9 @@ import { LogintelefonoComponent } from './logintelefono/logintelefono.component'
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
+import { CitaService } from './cita.service';
+
+
 
 @NgModule({
   declarations: [
@@ -66,7 +69,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     OpcionverificacionComponent,
     SpinnerComponent,
     RegistrartelefonoComponent,
-    LogintelefonoComponent,
+    LogintelefonoComponent
   ],
   imports: [
     BrowserModule,
@@ -85,9 +88,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
+    provideFirestore(() => getFirestore())
   ],
-  providers: [CitasService],
+  providers: [CitasService, CitaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

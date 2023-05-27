@@ -3,6 +3,7 @@ import { Cliente } from '../cliente';
 import { CitasService } from '../citas.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { CitaService } from '../cita.service';
 
 @Component({
   selector: 'app-reservation2',
@@ -17,7 +18,7 @@ export class Reservation2Component implements OnInit {
   correo:string="";
   cliente: Cliente;
 
-  constructor(private citaService:CitasService, private router: Router) { 
+  constructor(private citaService:CitasService,private cita:CitaService, private router: Router) { 
     this.cliente = this.citaService.nuevoCliente();
     this.fecha2="";
     this.hora2="";
@@ -37,6 +38,14 @@ export class Reservation2Component implements OnInit {
     this.cliente = this.citaService.nuevoCliente();
     this.router.navigateByUrl('/');
   }
+
+  async onSubmit() {
+    console.log(this.cliente)
+    const response = await this.cita.addCliente(this.cliente);
+    console.log(response);
+    this.router.navigateByUrl('/');
+  }
+
   showModal(){
     Swal.fire({
       title: 'Gracias por reservar.',
