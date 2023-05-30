@@ -28,7 +28,7 @@ export class SearchDatesComponent {
     if(this.index !== -1 ){
       this.datos = this.clientes[this.index];
     }else{
-      this.mensaje="El heroe no existe";
+      this.mensaje="El cliente no existe";
       setTimeout(() =>{
         this.mensaje="";
       },2000);

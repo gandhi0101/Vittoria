@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CitasService } from '../citas.service';
 import Swal from 'sweetalert2';
+import { CitaService } from '../cita.service';
 
 @Component({
   selector: 'app-reservation',
@@ -17,10 +18,11 @@ export class ReservationComponent implements OnInit {
   horasDisponibles: string[] = [];
   fechaDisponible: string = "";
   spiner: boolean=false;
+  datos:any;
 
 
 
-  constructor(private citas: CitasService) {
+  constructor(private citas: CitasService, private cita: CitaService) {
     this.horasDisp();
   }
 
@@ -77,13 +79,10 @@ export class ReservationComponent implements OnInit {
   }
 
   revisarPaso2() {
-    const datos = localStorage.getItem('data');
-    if (datos) {
-      console.log('Hay datos almacenados');
-      const storedData = localStorage.getItem('data');
-      const dataArray = storedData ? JSON.parse(storedData) : [];
-
-      const exists = dataArray.some((obj: MyObj) => obj.fecha === this.fecha && obj.hora === this.hora);
+    this.cita.getCliente().subscribe((cliente) => {
+      this.datos = cliente;
+    if (this.datos) {
+      const exists = this.datos.some((obj: MyObj) => obj.fecha === this.fecha && obj.hora === this.hora);
       if (exists) {
         this.fechaDisponible = "Fecha no disponible SELECCIONE OTRA";
         setTimeout(() => {
@@ -103,6 +102,7 @@ export class ReservationComponent implements OnInit {
         this.paso2 = false;
       }, 2000);
     }
+  });
   }
 
 

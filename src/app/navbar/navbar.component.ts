@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
         console.log('El correo electrónico no está verificado');
       }
 
-    })
+    });
   }
 
 
