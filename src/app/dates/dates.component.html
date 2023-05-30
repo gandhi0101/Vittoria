@@ -1,6 +1,6 @@
-<div *ngIf="!clientes.length; else cita" class="alert alert-danger">No hay clientes por el momento</div>
+<div *ngIf="!citaCliente.length; else cita" class="alert alert-danger">No tiene citas por el momento</div>
 <ng-template #cita>
-  <div class="titulo container">
+  <div class="titulo container"  *ngIf="forceUpdate">
     <h2>Citas</h2>
     <hr>
   </div>
@@ -12,7 +12,7 @@
         <th>Fecha</th>
         <th>UID</th>
         <th>Clave</th>
-        <!-- Agrega aquí más columnas si es necesario -->
+        <th>Borrar</th>
       </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
         <td>{{ dato.fecha }}</td>
         <td>{{ dato.edad }}</td>
         <td>{{ dato.clave }}</td>
-        <!-- Agrega aquí más columnas si es necesario -->
+        <td><button class="btn btn-outline-danger" (click)="onClickDelete(dato)" >Borrar</button></td>
       </tr>
     </tbody>
   </table>

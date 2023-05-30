@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
 
 
   usuarioValido:boolean=false;
+  isAdmin:boolean=false;
   nombreUsuario:string='';
   constructor(private router: Router, private afAtth: AngularFireAuth) {}
 
@@ -22,7 +23,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.afAtth.authState.subscribe((user)=>{
       this.nombreUsuario = user?.displayName ?? '';
-      if ((user?.emailVerified || user?.phoneNumber) && user ) {
+      if(user?.email == 'admin@gmail.com' ){
+        this.isAdmin=true;
+      }
+      if ((user?.emailVerified || user?.phoneNumber) && user) {
           this.usuarioValido=true;
         console.log('El correo electrónico está verificado');
       } else {
@@ -37,8 +41,11 @@ export class NavbarComponent implements OnInit {
   logOut(){
     this.afAtth.signOut()
   .then(() => {
+    this.usuarioValido=false;
+    this.isAdmin=false;
     this.router.navigate(['/inicio']);
-    window.location.reload();
+    
+    
   })
   .catch((error) => {
     // Ocurrió un error al cerrar sesión

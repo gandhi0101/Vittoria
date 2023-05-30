@@ -22,9 +22,10 @@ export class DatesComponent implements OnInit {
   ];
   dataSource: Cliente[] = [];
   tam: string = '';
+  forceUpdate = false;
 
   clientes: Cliente[] = [];
-  citaCliente:Cliente[]=[];
+  citaCliente: Cliente[] = [];
 
   constructor(
     private clientesService: CitasService,
@@ -35,25 +36,28 @@ export class DatesComponent implements OnInit {
   ngOnInit(): void {
     this.clientSer.getCliente().subscribe((cliente) => {
       this.clientes = cliente;
-      var i=0;
-      cliente.forEach((element:Cliente)=>{
-        this.afAtth.authState.subscribe((user)=>{
-          console.log(element.clave+' ' +user?.uid);
-          
-        if(element.clave===user?.uid){
-          this.citaCliente[i]=element;
-          i++;
+      var i = 0;
+      this.afAtth.authState.subscribe((user) => {
+        if (user?.email == 'admin@gmail.com') {
+          this.citaCliente=cliente;
+        } else {
+          cliente.forEach((element: Cliente) => {
+            console.log(element.clave + ' ' + user?.uid);
+
+            if (element.clave === user?.uid) {
+              this.citaCliente[i] = element;
+              i++;
+            }
+            console.log(this.citaCliente);
+          });
         }
-        console.log(this.citaCliente)
       });
-      })
     });
-  
   }
 
   async onClickDelete(cliente: Cliente) {
     const response = await this.clientSer.deleteCliente(cliente);
-    console.log(response)
+    console.log(response);
   }
 
   retornarTam() {

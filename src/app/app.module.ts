@@ -44,6 +44,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import { CitaService } from './cita.service';
+import { GraficasComponent } from './graficas/graficas.component';
 
 
 
@@ -69,7 +70,8 @@ import { CitaService } from './cita.service';
     OpcionverificacionComponent,
     SpinnerComponent,
     RegistrartelefonoComponent,
-    LogintelefonoComponent
+    LogintelefonoComponent,
+    GraficasComponent
   ],
   imports: [
     BrowserModule,

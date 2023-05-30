@@ -10,6 +10,7 @@ import { OpcionverificacionComponent } from './opcionverificacion/opcionverifica
 import { LoginComponent } from './login/login.component';
 import { RegistrartelefonoComponent } from './registrartelefono/registrartelefono.component';
 import { LogintelefonoComponent } from './logintelefono/logintelefono.component';
+import { GraficasComponent } from './graficas/graficas.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path: 'about', component: WhyUsComponent},
       {path: 'contact', component: ContactComponent},
       {path: 'citas', component: CitasComponent},
+      {path: 'graficas', component: GraficasComponent},
       {path: 'about/:id/:user', component: WhyUsComponent},
       {path: '**', pathMatch: 'full', redirectTo: 'home'}
     ]
