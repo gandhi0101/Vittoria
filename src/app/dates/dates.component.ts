@@ -35,25 +35,19 @@ export class DatesComponent implements OnInit {
   ngOnInit(): void {
     this.clientSer.getCliente().subscribe((cliente) => {
       this.clientes = cliente;
-      this.dataSource = cliente;
+      var i=0;
       cliente.forEach((element:Cliente)=>{
-        var i=0;
         this.afAtth.authState.subscribe((user)=>{
-          console.log(element.UID+' ' +user?.uid);
+          console.log(element.clave+' ' +user?.uid);
           
-        if(element.UID==user?.uid){
+        if(element.clave===user?.uid){
           this.citaCliente[i]=element;
-          console.log(this.citaCliente);
           i++;
         }
+        console.log(this.citaCliente)
       });
       })
-      
-      
     });
-
-    
-
   
   }
 

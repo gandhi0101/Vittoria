@@ -7,4 +7,5 @@ export interface Cliente {
   correo: string;
   edad: string;
   sexo: string;
+  clave:string;
 }

@@ -34,6 +34,7 @@ export class Reservation2Component implements OnInit {
     this.cliente.personas = this.personas2;
     this.afAtth.authState.subscribe((user)=>{
       this.cliente.UID=user?.uid  ?? '';
+      this.cliente.clave=user?.uid  ?? '';
     })
     
   }

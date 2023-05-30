@@ -29,7 +29,8 @@ export class CitasService {
       personas: "",
       correo: "",
       edad:"",
-      sexo:""
+      sexo:"",
+      clave:""
     };
   }
 }
