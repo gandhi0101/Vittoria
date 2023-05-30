@@ -22,11 +22,14 @@ export class CitasService {
 
   nuevoCliente(): Cliente {
     return {
+      UID:"",
       nombre: "",
       fecha: "",
       hora:"",
       personas: "",
-      correo: ""
+      correo: "",
+      edad:"",
+      sexo:""
     };
   }
 }

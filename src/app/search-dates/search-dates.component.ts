@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Cliente } from '../cliente';
 import { CitasService } from '../citas.service';
+import { CitaService } from '../cita.service';
 @Component({
   selector: 'app-search-dates',
   templateUrl: './search-dates.component.html',
@@ -8,13 +9,15 @@ import { CitasService } from '../citas.service';
 })
 export class SearchDatesComponent {
 
-  clientes:Cliente[];
+  clientes:Cliente[]=[];
   index:number=-1;
   datos!: Cliente;
   mensaje:string="";
 
-  constructor(public servicio: CitasService){
-    this.clientes=this.servicio.getClientes();
+  constructor(public servicio: CitaService){
+    this.servicio.getCliente().subscribe(cliente=>{
+      this.clientes = cliente;
+    })
   }
 
 

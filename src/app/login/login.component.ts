@@ -15,6 +15,7 @@ export class LoginComponent {
 
   loginUsuario: FormGroup;
   validacion:string="";
+  
 
   
   constructor(private fb: FormBuilder, private afAtth: AngularFireAuth ,private router: Router ){
@@ -29,7 +30,6 @@ export class LoginComponent {
     const password = this.loginUsuario.value.password;
       this.afAtth.setPersistence('local').then(()=>{
       this.afAtth.signInWithEmailAndPassword(email,password).then((user) =>{
-        console.log(user);
         if(user.user?.emailVerified){
           this.router.navigate(['/inicio']);
         }else{
@@ -39,7 +39,6 @@ export class LoginComponent {
           })
           this.router.navigate(['/correologin']);
         }
-        
       }).catch((error) =>{
         this.validacion=this.firebaseError(error.code);
       })

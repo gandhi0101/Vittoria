@@ -17,6 +17,7 @@ export class RegistrarUsuarioComponent {
 
   constructor(private fb: FormBuilder, private afAtth: AngularFireAuth ,private router: Router ){
     this.registrarUsuario = this.fb.group({
+      nombre: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
       repetirPassword: ['', Validators.required]
@@ -24,6 +25,7 @@ export class RegistrarUsuarioComponent {
   }
 
   registrar(){
+    const username = this.registrarUsuario.value.nombre;
     const email = this.registrarUsuario.value.email;
     const password = this.registrarUsuario.value.password;
     const repetirPassword = this.registrarUsuario.value.repetirPassword;
@@ -35,9 +37,13 @@ export class RegistrarUsuarioComponent {
 
     this.loading=true;
     this.afAtth.createUserWithEmailAndPassword(email, password)
-    .then(()=>{
+    .then((user)=>{
       this.loading=false;
       this.verificarCorreo();
+      const us = user.user;
+      return us?.updateProfile({
+        displayName: username
+      });
     }).catch((error)=>{
       this.loading=false;
       this.validacion=this.firebaseError(error.code);

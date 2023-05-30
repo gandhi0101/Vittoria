@@ -1,6 +1,9 @@
 <div class="registro" *ngIf="!loading">
 <form (ngSubmit)="registrar()" class="form" [formGroup]="registrarUsuario">
     <p class="form-title">Registrar</p>
+    <div class="input-container">
+      <input placeholder="Nombre" type="text" formControlName="nombre">
+  </div>
      <div class="input-container">
        <input placeholder="Email" type="email" formControlName="email">
    </div>

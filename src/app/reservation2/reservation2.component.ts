@@ -4,6 +4,7 @@ import { CitasService } from '../citas.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { CitaService } from '../cita.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-reservation2',
@@ -16,9 +17,10 @@ export class Reservation2Component implements OnInit {
   @Input() personas2: string;
   nombre:string="";
   correo:string="";
+  UID:string="";
   cliente: Cliente;
 
-  constructor(private citaService:CitasService,private cita:CitaService, private router: Router) { 
+  constructor(private citaService:CitasService,private cita:CitaService, private router: Router,  private afAtth: AngularFireAuth) { 
     this.cliente = this.citaService.nuevoCliente();
     this.fecha2="";
     this.hora2="";
@@ -30,6 +32,9 @@ export class Reservation2Component implements OnInit {
     this.cliente.fecha = this.fecha2;
     this.cliente.hora = this.hora2;
     this.cliente.personas = this.personas2;
+    this.afAtth.authState.subscribe((user)=>{
+      this.cliente.UID=user?.uid  ?? '';
+    })
     
   }
 
