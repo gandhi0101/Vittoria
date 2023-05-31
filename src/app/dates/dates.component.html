@@ -4,24 +4,26 @@
     <h2>Citas</h2>
     <hr>
   </div>
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>Nombre</th>
         <th>Correo</th>
         <th>Fecha</th>
-        <th>UID</th>
-        <th>Clave</th>
+        <th>Edad</th>
+        <th>Personas</th>
+        <th>Sexo</th>
         <th>Borrar</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let dato of citaCliente">
+      <tr *ngFor="let dato of citaCliente" >
         <td>{{ dato.nombre }}</td>
         <td>{{ dato.correo }}</td>
         <td>{{ dato.fecha }}</td>
         <td>{{ dato.edad }}</td>
-        <td>{{ dato.clave }}</td>
+        <td>{{dato.personas}}</td>
+        <td>{{dato.sexo}}</td>
         <td><button class="btn btn-outline-danger" (click)="onClickDelete(dato)" >Borrar</button></td>
       </tr>
     </tbody>
