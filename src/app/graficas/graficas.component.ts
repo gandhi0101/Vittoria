@@ -18,8 +18,12 @@ export class GraficasComponent implements OnInit {
   labelPersonas:string[]=['1 Personas', '2 Personas', '3 Personas', '4 Personas', '5 Personas', '6 Personas', '7 Personas' ,'8 Personas', '9 Personas'];
   personas:number[]=[0,0,0,0,0,0,0,0,0];
   mostrar: boolean = false;
+  cargado:boolean=false;
+  graficaSelecionada:string="";
 
-  constructor(private clientSer: CitaService, private afAtth: AngularFireAuth, private grafico: GraficoService){}
+  constructor(private clientSer: CitaService, private afAtth: AngularFireAuth, private grafico: GraficoService){
+    
+  }
 
   ngOnInit(): void {
     this.clientSer.getCliente().subscribe((cliente) => {
@@ -49,12 +53,28 @@ export class GraficasComponent implements OnInit {
           });
     });
 
-    this.generarGraficos();
+    setTimeout(()=>{
+      this.cargado=true;
+    }, 2000)
   }
 
-  generarGraficos(){
-    this.grafico.double("Personas que asistiran por reservacion", 'Personas por reservacion', this.labelPersonas, this.personas, 'barras', 'bar');
-    this.grafico.double("Sexo", "Sexo M/F", this.labelSexo, this.sexo, "pastel", 'doughnut');
+  actualizarPersonas(){
+    setTimeout(()=>{
+      this.grafico.double("Personas que asistiran por reservacion", 'Personas por reservacion', this.labelPersonas, this.personas, 'barras', 'bar');
+    }, 2000)
   }
+
+  actualizarSexo(){
+    setTimeout(()=>{
+      this.grafico.double("Sexo", "Sexo M/F", this.labelSexo, this.sexo, "pastel", 'doughnut');
+    }, 2000)
+  }
+
+  actualizarEdades(){
+    setTimeout(()=>{
+      this.grafico.double("Eades", "Cantidad", this.labelEdades, this.edades, "barras2", 'bar');
+    }, 2000)
+  }
+
 
 }
