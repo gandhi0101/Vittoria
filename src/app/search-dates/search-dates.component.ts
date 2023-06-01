@@ -11,7 +11,7 @@ export class SearchDatesComponent {
 
   clientes:Cliente[]=[];
   index:number=-1;
-  datos!: Cliente;
+  datos: Cliente[]=[];
   mensaje:string="";
 
   constructor(public servicio: CitaService){
@@ -23,17 +23,18 @@ export class SearchDatesComponent {
 
   
   ver(aux:string){
+    var i=0;
     this.index = this.clientes.findIndex( p => p.nombre === aux);
-    console.log(this.index);
     if(this.index !== -1 ){
-      this.datos = this.clientes[this.index];
+      this.datos[i] = this.clientes[this.index];
     }else{
       this.mensaje="El cliente no existe";
       setTimeout(() =>{
         this.mensaje="";
       },2000);
     }
-
+    console.log(this.datos);
+    
   }
 
 }

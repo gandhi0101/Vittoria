@@ -3,6 +3,7 @@ import { Cliente } from '../cliente';
 import { CitasService } from '../citas.service';
 import { CitaService } from '../cita.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dates',
@@ -22,7 +23,7 @@ export class DatesComponent implements OnInit {
   ];
   dataSource: Cliente[] = [];
   tam: string = '';
-  forceUpdate = false;
+  isUpdate = false;
 
   clientes: Cliente[] = [];
   citaCliente: Cliente[] = [];
@@ -42,14 +43,13 @@ export class DatesComponent implements OnInit {
           this.citaCliente=cliente;
         } else {
           cliente.forEach((element: Cliente) => {
-            console.log(element.clave + ' ' + user?.uid);
 
             if (element.clave === user?.uid) {
               this.citaCliente[i] = element;
               i++;
             }
-            console.log(this.citaCliente);
           });
+          this.isUpdate=true;
         }
       });
     });
@@ -57,6 +57,10 @@ export class DatesComponent implements OnInit {
 
   async onClickDelete(cliente: Cliente) {
     const response = await this.clientSer.deleteCliente(cliente);
+    Toast.fire({
+      icon: 'success',
+      title: 'La cita se elimino con exito'
+    })
     console.log(response);
   }
 
@@ -70,3 +74,16 @@ export class DatesComponent implements OnInit {
     }
   }
 }
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer);
+    toast.addEventListener('mouseleave', Swal.resumeTimer);
+  },
+});
+

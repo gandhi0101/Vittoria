@@ -6,21 +6,19 @@ import { CitaService } from '../cita.service';
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
-  styleUrls: ['./reservation.component.scss']
+  styleUrls: ['./reservation.component.scss'],
 })
 export class ReservationComponent implements OnInit {
   paso2 = true;
-  fechahoy: string = "";
-  fecha: string = "";
-  hora: string = "";
-  personas: string = "";
+  fechahoy: string = '';
+  fecha: string = '';
+  hora: string = '';
+  personas: string = '';
   numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   horasDisponibles: string[] = [];
-  fechaDisponible: string = "";
-  spiner: boolean=false;
-  datos:any;
-
-
+  fechaDisponible: string = '';
+  spiner: boolean = false;
+  datos: any;
 
   constructor(private citas: CitasService, private cita: CitaService) {
     this.horasDisp();
@@ -75,37 +73,29 @@ export class ReservationComponent implements OnInit {
         }
       }
     }
-
   }
 
   revisarPaso2() {
     this.cita.getCliente().subscribe((cliente) => {
       this.datos = cliente;
-    if (this.datos) {
-      const exists = this.datos.some((obj: MyObj) => obj.fecha === this.fecha && obj.hora === this.hora);
-      if (exists) {
-        this.fechaDisponible = "Fecha no disponible SELECCIONE OTRA";
-        setTimeout(() => {
-      }, 2000);
+      if (this.datos) {
+        const exists = this.datos.some(
+          (obj: MyObj) => obj.fecha === this.fecha && obj.hora === this.hora
+        );
+        if (exists) {
+          this.fechaDisponible = 'Fecha no disponible SELECCIONE OTRA';
+        } else {
+          this.spiner = true;
+          this.fechaDisponible = 'La fecha si esta disponible';
+            this.paso2 = false;
+        }
       } else {
-        this.spiner=true;
-        this.fechaDisponible = "La fecha si esta disponible";
-        setTimeout(() => {
-          this.paso2 = false;
-      }, 2000);
-      }
-    } else {
-      this.fechaDisponible = "La fecha si esta disponible";
-      this.spiner=true;
-      setTimeout(() => {
-        console.log('Se ha ejecutado la función después de 5 segundos');
+        this.fechaDisponible = 'La fecha si esta disponible';
+        this.spiner = true;
         this.paso2 = false;
-      }, 2000);
-    }
-  });
+      }
+    });
   }
-
-
 }
 interface MyObj {
   nombre: string;
@@ -114,9 +104,3 @@ interface MyObj {
   personas: string;
   correo: string;
 }
-
-
-
-
-
-

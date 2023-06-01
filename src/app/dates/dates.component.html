@@ -1,31 +1,41 @@
-<div *ngIf="!citaCliente.length; else cita" class="alert alert-danger">No tiene citas por el momento</div>
-<ng-template #cita>
-  <div class="titulo container"  *ngIf="forceUpdate">
-    <h2>Citas</h2>
-    <hr>
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Correo</th>
-        <th>Fecha</th>
-        <th>Edad</th>
-        <th>Personas</th>
-        <th>Sexo</th>
-        <th>Borrar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let dato of citaCliente" >
-        <td>{{ dato.nombre }}</td>
-        <td>{{ dato.correo }}</td>
-        <td>{{ dato.fecha }}</td>
-        <td>{{ dato.edad }}</td>
-        <td>{{dato.personas}}</td>
-        <td>{{dato.sexo}}</td>
-        <td><button class="btn btn-outline-danger" (click)="onClickDelete(dato)" >Borrar</button></td>
-      </tr>
-    </tbody>
-  </table>
+<div *ngIf="!isUpdate else cargado" class="spinner">
+  <div class="loading">
+  <app-spinner></app-spinner>
+</div>
+</div>
+
+<ng-template #cargado>
+  <div *ngIf="!citaCliente.length; else cita" class="alert alert-danger">No tiene citas por el momento</div>
+  <ng-template #cita>
+    <div class="citas">
+      <div class="titulo">
+        <h2>Citas</h2>
+        <hr>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Fecha</th>
+            <th>Edad</th>
+            <th>Personas</th>
+            <th>Sexo</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dato of citaCliente">
+            <td>{{ dato.nombre }}</td>
+            <td>{{ dato.correo }}</td>
+            <td>{{ dato.fecha }}</td>
+            <td>{{ dato.edad }}</td>
+            <td>{{dato.personas}}</td>
+            <td>{{dato.sexo}}</td>
+            <td><button class="btn btn-outline-danger" (click)="onClickDelete(dato)">Borrar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
 </ng-template>

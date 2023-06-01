@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
@@ -7,14 +7,13 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Vittoria';
 
- 
+  cargado:boolean=true;
 
-
-
-
-
+  ngOnInit(): void {
+      this.cargado = false;
+  }
 
 }
