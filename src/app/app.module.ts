@@ -46,6 +46,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CitaService } from './cita.service';
 import { GraficasComponent } from './graficas/graficas.component';
 import { CargandoComponent } from './cargando/cargando.component';
+import { Chart } from 'chart.js/dist';
 
 
 

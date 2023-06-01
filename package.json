@@ -25,6 +25,7 @@
     "bootstrap": "^5.2.3",
     "bulma": "^0.9.4",
     "caniuse-lite": "^1.0.30001244",
+    "chart.js": "^4.3.0",
     "firebase": "^9.22.0",
     "fs": "^0.0.1-security",
     "jquery": "^3.6.4",
